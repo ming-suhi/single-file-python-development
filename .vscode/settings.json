@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    ".vscode": true,
+    "**/__pycache__": true,
+    "**/testing": true,
+    "template": true,
+    "create.py": true,
+    ".gitignore": true
+  }
+}
