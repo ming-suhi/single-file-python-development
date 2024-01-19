@@ -2,7 +2,8 @@
   "files.exclude": {
     ".vscode": true,
     "**/__pycache__": true,
-    "**/testing": true,
+    "testing": true,
+    "LICENSE": true,
     "template": true,
     "create.py": true,
     ".gitignore": true

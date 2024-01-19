@@ -45,13 +45,13 @@ Programming can at times be enjoyable, but it surely is frustrating when you fin
     To test your program in the terminal run
     
     ```bash
-    py -m <projectName>.testing.test
+    py -m testing.test --project="<projectName>"
     ```
     
     To save a copy of the current program and its output run
 
     ```bash
-    py -m <projectName>.testing.test --save="<fileName>"
+    py -m testing.test --project="<projectName>" --save="<fileName>"
     ```
 
     The copy is stored as `.txt` file that can be found in the `stream` directory of your project

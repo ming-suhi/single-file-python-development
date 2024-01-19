@@ -1,7 +1,7 @@
 import sys
 
 TERMINAL = sys.stdout
-
+				
 def read_file_as_string(path):
 	with open(path, "r") as file:
 		return file.read()

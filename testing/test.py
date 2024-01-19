@@ -4,20 +4,22 @@ import os
 from .tools import IOManager, read_file_as_string
 
 parser = argparse.ArgumentParser()
+parser.add_argument("--project", type=str, default=None)
 parser.add_argument("--save", type=str, default=None)
+
 args = parser.parse_args()
 
-input_path = os.path.abspath(f"{__file__}/../../stream/input.txt")
-output_path = os.path.abspath(f"{__file__}/../../stream/{args.save}.txt")
-main_path = os.path.abspath(f"{__file__}/../../index.py")
-test_file_path = os.path.abspath(f"{__file__}/../test-build.py")
+input_path = os.path.abspath(f"{__file__}/../../{args.project}/stream/input.txt")
+output_path = os.path.abspath(f"{__file__}/../../{args.project}/stream/{args.save}.txt")
+main_path = os.path.abspath(f"{__file__}/../../{args.project}/index.py")
+test_file_path = os.path.abspath(f"{__file__}/../{args.project}.test.py")
 
 test_case = IOManager(input_path, output_path)
 input = test_case.mock_input()
 
 def build_test_file():
     with open(test_file_path, "w") as file:
-        file.write("from .test import input\n")
+        file.write("from .test import input\n\n")
         file.write(read_file_as_string(main_path))
         file.close()
 
